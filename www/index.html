@@ -58,7 +58,7 @@
       $("#message").html(msg);
     }
     function searchSpeedLT(){
-        let speed = parseInt($("#number").val());
+        let speed = parseInt($("#speed").val());
         let TestDataClass = ncmb.DataStore(db);
         TestDataClass
         .lessThan("speed",speed)
@@ -68,12 +68,12 @@
         })
     }
     function searchSpeedGT(){
-        let number = parseInt($("#speed").val(),10);
+        let speed = parseInt($("#speed").val(),10);
         let TestDataClass = ncmb.DataStore(db);
-        TestDataClassz
+        TestDataClass
         .greaterThan("speed",speed)
         .fetchAll()
-        .then(function(reaults){
+        .then(function(results){
             showResults(results);
         })
     }
