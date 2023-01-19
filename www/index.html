@@ -32,10 +32,10 @@
         })
     }
 
-    function searchNumber() {
+    function searchSpeed() {
       let TestDataClass = ncmb.DataStore(db);
-      let number = parseInt($("#number").val());
-      TestDataClass.equalTo("number", number).fetchAll()
+      let speed = parseInt($("#speed").val());
+      TestDataClass.equalTo("speed", speed).fetchAll()
         .then(function(results) {
           showResults(results);
         })
@@ -57,21 +57,21 @@
       msg += "</table>";
       $("#message").html(msg);
     }
-    function searchNumberLT(){
-        let number = parseInt($("#number").val());
+    function searchSpeedLT(){
+        let speed = parseInt($("#number").val());
         let TestDataClass = ncmb.DataStore(db);
         TestDataClass
-        .lessThan("number",number)
+        .lessThan("speed",speed)
         .fetchAll()
         .then(function(results){
             showResults(results);
         })
     }
-    function searchNumberGT(){
-        let number = parseInt($("#number").val(),10);
+    function searchSpeedGT(){
+        let number = parseInt($("#speed").val(),10);
         let TestDataClass = ncmb.DataStore(db);
-        TestDataClass
-        .greaterThan("number",number)
+        TestDataClassz
+        .greaterThan("speed",speed)
         .fetchAll()
         .then(function(reaults){
             showResults(results);
@@ -87,8 +87,8 @@
     <input id="name" type="text" placeholder="monster name">
   </div>
   <div>
-    <label for="number">number:</label>
-    <input id="number" type="number" placeholder="monster number">
+    <label for="speed">speed:</label>
+    <input id="speed" type="speed" placeholder="monster speed">
   </div>
   <div id="button">
     <button class="btn" onclick="fetchAll()">Fetch All</button>
